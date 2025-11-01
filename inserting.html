@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Enter Your Name</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 15px;
+      font-size: 16px;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+    h2 {
+      color: blue;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Enter Your Name</h1>
+
+  <input type="text" id="nameInput" placeholder="Type your name here">
+  <button onclick="showName()">Submit</button>
+
+  <h2 id="displayName"></h2>
+
+  <script>
+    function showName() {
+      var name = document.getElementById("nameInput").value;
+      if (name.trim() === "") {
+        document.getElementById("displayName").innerHTML = "Please enter a name!";
+      } else {
+        document.getElementById("displayName").innerHTML = "Hello, " + name + "!";
+      }
+    }
+  </script>
+
+</body>
+</html>
